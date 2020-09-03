@@ -17,6 +17,8 @@ const post = async (_parent, args, context) => {
 		},
 	});
 
+	context.pubsub.publish("NEW_LINK", link);
+
 	return link;
 };
 
